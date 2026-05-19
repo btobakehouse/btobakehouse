@@ -7,9 +7,25 @@ import CATALOGUE_IMAGE_6 from "@/assets/catalogue-6.jpg";
 import CATALOGUE_IMAGE_7 from "@/assets/catalogue-7.jpg";
 import CATALOGUE_IMAGE_8 from "@/assets/catalogue-8.jpg";
 
-export const NAV_ITEMS = ["Products", "Our Solution", "How It Works"];
+export const NAV_ITEMS = [
+	{
+		id: 1,
+		name: "Products",
+		link: "#product",
+	},
+	{
+		id: 2,
+		name: "Our Solution",
+		link: "#solution",
+	},
+	{
+		id: 3,
+		name: "How It Works",
+		link: "#process",
+	},
+];
 
-export const catalogueItems = [
+export const CATALOGUE_ITEMS = [
 	{
 		id: 1,
 		title: "Classic Fudgy Brownies",
@@ -172,5 +188,43 @@ export const PROCESS_STEPS = [
 		id: "05",
 		title: "Start recurring supply",
 		description: "Fresh batches, on your calendar.",
+	},
+];
+
+export const WHY_CHOOSE_US = [
+	{
+		id: "01",
+		title: "Consistent Quality",
+		description:
+			"Standardised recipes and production lines so every batch tastes the same.",
+	},
+	{
+		id: "02",
+		title: "Bulk-Ready Production",
+		description:
+			"Scaled kitchens built to deliver on volume — without compromise.",
+	},
+	{
+		id: "03",
+		title: "Better Margins",
+		description:
+			"Skip the kitchen overhead. Buy what you need, at wholesale pricing.",
+	},
+	{
+		id: "04",
+		title: "Flexible Formats",
+		description:
+			"Slabs, portions, jars, mini bites — packed the way your business serves.",
+	},
+	{
+		id: "05",
+		title: "White Label Support",
+		description: "Custom branding, sleeves and packaging for your menu.",
+	},
+	{
+		id: "06",
+		title: "Reliable Delivery",
+		description:
+			"Recurring schedules with consistent lead times and freshness.",
 	},
 ];

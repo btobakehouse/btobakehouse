@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
+import {
+	Sheet,
+	SheetClose,
+	SheetContent,
+	SheetTrigger,
+} from "../components/ui/sheet";
 import { NAV_ITEMS } from "../constant";
 
 export default function Navbar() {
 	const [scrolled, setScrolled] = useState(false);
-	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const onScroll = () => setScrolled(window.scrollY > 40);
@@ -28,12 +33,12 @@ export default function Navbar() {
 				{/* Desktop links */}
 				<ul className="hidden md:flex items-center gap-8">
 					{NAV_ITEMS.map((link) => (
-						<li key={link}>
+						<li key={link.id}>
 							<a
-								href={`#${link.toLowerCase()}`}
+								href={`${link.link}`}
 								className="text-sm text-secondary/75 font-medium font-inter hover:text-secondary transition-colors"
 							>
-								{link}
+								{link.name}
 							</a>
 						</li>
 					))}
@@ -42,62 +47,63 @@ export default function Navbar() {
 				{/* CTA */}
 				<div className="hidden md:flex items-center gap-4">
 					<a
-						href="#contact"
+						href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
 						className="text-sm rounded-lg tracking-wide bg-primary text-background px-5 py-2 hover:opacity-90 active:scale-95 font-inter font-light hover:bg-secondary transition-all duration-300"
 					>
 						Request Bulk Pricing
 					</a>
 				</div>
 
-				{/* Mobile hamburger */}
-				<button
-					type="button"
-					onClick={() => setMenuOpen(!menuOpen)}
-					className="md:hidden flex flex-col gap-1.5 p-1"
-					aria-label="Toggle menu"
-				>
-					<span
-						className={`block w-5 h-[1.5px] bg-primary transition-all duration-300 ${
-							menuOpen ? "rotate-45 translate-y-2" : ""
-						}`}
-					/>
-					<span
-						className={`block w-5 h-[1.5px] bg-primary transition-all duration-300 ${
-							menuOpen ? "opacity-0" : ""
-						}`}
-					/>
-					<span
-						className={`block w-5 h-[1.5px] bg-primary transition-all duration-300 ${
-							menuOpen ? "-rotate-45 -translate-y-2" : ""
-						}`}
-					/>
-				</button>
-			</div>
-
-			{/* Mobile menu */}
-			<div
-				className={`md:hidden transition-all duration-300 overflow-hidden ${
-					menuOpen ? "max-h-64 border-b border-white/5" : "max-h-0"
-				}`}
-			>
-				<div className=" backdrop-blur-xl px-6 pb-6 pt-2 flex flex-col gap-4">
-					{NAV_ITEMS.map((link) => (
-						<a
-							key={link}
-							href={`#${link.toLowerCase()}`}
-							onClick={() => setMenuOpen(false)}
-							className="text-secondary/75 py-1 text-sm  font-inter"
-						>
-							{link}
-						</a>
-					))}
-					<a
-						href="#contact"
-						className="text-sm rounded-lg tracking-wide bg-primary text-background px-5 py-2 hover:opacity-90 active:scale-95 font-inter font-light hover:bg-secondary transition-all duration-300"
+				{/* Mobile menu trigger */}
+				<Sheet>
+					<SheetTrigger
+						render={
+							<button
+								type="button"
+								className="md:hidden flex flex-col gap-1.5 p-1"
+								aria-label="Open menu"
+							/>
+						}
 					>
-						Request Bulk Pricing
-					</a>
-				</div>
+						<span className="block w-5 h-[1.5px] bg-primary transition-all duration-300" />
+						<span className="block w-5 h-[1.5px] bg-primary transition-all duration-300" />
+						<span className="block w-5 h-[1.5px] bg-primary transition-all duration-300" />
+					</SheetTrigger>
+
+					<SheetContent
+						side="right"
+						className="md:hidden w-[80vw] max-w-xs border-l border-white/10 bg-background px-6 pb-6 pt-14"
+					>
+						<div className="flex flex-col gap-4">
+							{NAV_ITEMS.map((link) => (
+								<SheetClose
+									key={link.id}
+									render={
+										<button
+											type="button"
+											onClick={() => {
+												window.location.hash = link.link;
+											}}
+											className="text-secondary/75 py-1 text-sm font-inter text-left"
+										/>
+									}
+								>
+									{link.name}
+								</SheetClose>
+							))}
+
+							<SheetClose className="flex flex-row items-start justify-start">
+								<a
+									href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
+									className="text-sm rounded-lg tracking-wide bg-primary text-background px-5 py-1.5 hover:opacity-90 active:scale-95 font-inter font-light hover:bg-secondary transition-all duration-300 text-left"
+									aria-label="Request Bulk Pricing"
+								>
+									Request Bulk Pricing
+								</a>
+							</SheetClose>
+						</div>
+					</SheetContent>
+				</Sheet>
 			</div>
 		</nav>
 	);

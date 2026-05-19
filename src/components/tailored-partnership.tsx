@@ -4,10 +4,13 @@ import { PARTNERSHIP_TABS } from "@/constant";
 
 const TailoredPartnership = () => {
 	return (
-		<section className="bg-secondary text-background px-4 sm:px-6 lg:px-8 py-22 ">
+		<section
+			id="explore-range"
+			className="bg-secondary text-background px-4 sm:px-6 lg:px-8 py-22 "
+		>
 			<div className="mx-auto max-w-7xl">
-				<div className="max-w-3xl">
-					<p className="mb-5 font-inter text-[0.7rem] uppercase tracking-[0.35em] text-background/70">
+				<div className="max-w-3xl flex flex-col gap-5">
+					<p className="text-background/70 text-xs md:text-sm tracking-[.25em] font-inter uppercase font-regular">
 						Tailored Partnerships
 					</p>
 					<h2 className="text-3xl sm:text-4xl lg:text-6xl font-medium text-background">

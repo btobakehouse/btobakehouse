@@ -3,10 +3,10 @@ import { PROCESS_STEPS } from "@/constant";
 
 const HowItWorks = () => {
 	return (
-		<section className="bg-[#f4f1eb] px-4 py-18 sm:px-6 sm:py-22 lg:px-8 lg:py-26">
+		<section id="process" className="py-22 px-4 sm:px-6 lg:px-8">
 			<div className="mx-auto max-w-7xl flex flex-col gap-12 md:gap-14">
 				<div className="flex flex-col gap-5">
-					<p className="text-primary text-sm md:text-base font-medium tracking-widest">
+					<p className="text-primary text-xs md:text-sm tracking-[.25em] font-inter font-regular">
 						HOW IT WORKS
 					</p>
 					<h2 className="text-3xl sm:text-4xl lg:text-6xl font-medium text-secondary">
@@ -36,13 +36,13 @@ const HowItWorks = () => {
 				</div>
 
 				<div className="flex justify-center">
-					<button
-						type="button"
+					<a
+						href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
 						className="inline-flex items-center gap-3 border border-border bg-transparent px-5 py-3 font-inter text-base font-light text-primary transition-colors duration-200 hover:bg-secondary hover:text-background"
 					>
 						Request a Sample Box
 						<ArrowUpRight className="h-5 w-5" />
-					</button>
+					</a>
 				</div>
 			</div>
 		</section>

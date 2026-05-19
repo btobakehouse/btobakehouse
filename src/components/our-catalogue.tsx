@@ -7,14 +7,14 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { catalogueItems } from "@/constant";
+import { CATALOGUE_ITEMS } from "@/constant";
 
 const OurCatalogue = () => {
 	return (
-		<section className="py-22 px-4 sm:px-6 lg:px-8">
+		<section id="product" className="py-22 px-4 sm:px-6 lg:px-8">
 			<div className="max-w-7xl mx-auto">
 				<div className="max-w-4xl flex flex-col items-start gap-5">
-					<p className="text-primary text-sm md:text-base font-medium tracking-widest">
+					<p className="text-primary text-xs md:text-sm tracking-[.25em] font-inter font-regular">
 						OUR CATALOGUE
 					</p>
 					<h2 className="text-3xl sm:text-4xl lg:text-6xl font-medium text-secondary mb-8">
@@ -23,7 +23,7 @@ const OurCatalogue = () => {
 				</div>
 
 				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-					{catalogueItems.map((item) => (
+					{CATALOGUE_ITEMS.map((item) => (
 						<Card
 							key={item.id}
 							className="group overflow-hidden border-border/60 bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
