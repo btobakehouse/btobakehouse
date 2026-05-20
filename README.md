@@ -1,73 +1,99 @@
-# React + TypeScript + Vite
+# BtoBakehouse | Bulk Bakery Supply for Businesses
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Fresh bulk bakery supply for cafés, restaurants, and food businesses. Brownies, tiramisu, breads, and desserts delivered with zero kitchen work required.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+BtoBakehouse is a modern web platform connecting bulk bakery suppliers with food businesses. It provides an easy-to-use interface for browsing products, understanding our offering, and building partnerships.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with Nativewind
+- **UI Components**: Shadcn/ui
+- **Code Quality**: ESLint with TypeScript support
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the development server with hot module replacement (HMR):
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Build
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+### Preview
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Linting
+
+Check code quality:
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── ui/             # Reusable UI components (button, card, etc.)
+│   ├── hero-section.tsx
+│   ├── cta-section.tsx
+│   ├── how-it-works.tsx
+│   ├── our-catalogue.tsx
+│   └── ...
+├── shared/             # Shared layout components (navbar, footer)
+├── lib/                # Utilities and helpers
+├── App.tsx             # Main app component
+├── main.tsx            # Entry point
+└── constant.ts         # Application constants
+```
+
+## Features
+
+- **Hero Section**: Compelling introduction to BtoBakehouse
+- **How It Works**: Clear explanation of the partnership process
+- **Catalogue**: Browse our product offerings
+- **Why Choose Us**: Highlight unique value propositions
+- **Tailored Partnerships**: Customized solutions for different business needs
+- **CTA Section**: Clear call-to-action for inquiries
+- **Responsive Design**: Mobile-friendly interface
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## License
+
+All rights reserved © 2026 BtoBakehouse.
 ```
