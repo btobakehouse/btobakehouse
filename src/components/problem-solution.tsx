@@ -1,22 +1,7 @@
+import { PROBLEMS, SOLUTIONS } from "@/constant";
+import { Button } from "./ui/button";
+
 const ProblemSolution = () => {
-	const problems = [
-		"In house production is expensive to setup",
-		"Maintaining consistency batch to batch is difficult",
-		"Bakery equipment requires investment",
-		"Skilled bakery staff is hard to hire and retain",
-		"Menus need constant variety and seasonal SKUs",
-		"Demand for certain items fluctuates",
-	];
-
-	const solutions = [
-		"Ready to serve products on your schedule",
-		"Bulk ready production at predictable cost",
-		"Standardised recipes across every batch",
-		"white label options with your branding",
-		"Flexible quantities, formats, and SKUs",
-		"Reliable recurring supply",
-	];
-
 	return (
 		<section id="solution" className="md:py-22">
 			<div className="bg-accent/40 py-22 px-4 sm:px-6 lg:px-8">
@@ -31,7 +16,7 @@ const ProblemSolution = () => {
 								Running a bakery inside your business is hard
 							</h2>
 							<ul className="space-y-4">
-								{problems.map((problem) => (
+								{PROBLEMS.map((problem) => (
 									<li key={problem} className="flex items-center gap-3">
 										<span className="text-secondary mt-1">•</span>
 										<span className="text-secondary text-sm md:text-base font-inter font-light">
@@ -51,7 +36,7 @@ const ProblemSolution = () => {
 								A bakery partner you can plug into your menu
 							</h2>
 							<ul className="space-y-4 mb-8">
-								{solutions.map((solution) => (
+								{SOLUTIONS.map((solution) => (
 									<li key={solution} className="flex items-center gap-3">
 										<span className="text-secondary mt-1">•</span>
 										<span className="text-secondary text-sm md:text-base font-inter font-light">
@@ -60,12 +45,14 @@ const ProblemSolution = () => {
 									</li>
 								))}
 							</ul>
-							<button
-								type="button"
-								className="bg-primary hover:bg-secondary text-sm text-background px-6 py-2 rounded-lg font-inter font-light transition-colors duration-300 hover:cursor-pointer"
+							<a
+								href="https://docs.google.com/forms/d/e/1FAIpQLSc3XQClOhl44Nz95IVdDjMeJeumspqBdUyK6FssILV5liJzgw/viewform"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="w-full"
 							>
-								Build Your Bakery Menu
-							</button>
+								<Button size="sm">Build Your Bakery Menu</Button>{" "}
+							</a>
 						</div>
 					</div>
 				</div>

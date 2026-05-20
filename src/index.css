@@ -14,6 +14,7 @@
 @theme inline {
 	--color-text: var(--text);
 	--color-background: var(--background);
+	--color-foreground: var(--foreground);
 	--color-border: var(--border);
 	--color-card: var(--card);
 	--color-primary: var(--primary);
@@ -61,10 +62,11 @@
 	/* COLORS */
 	--text: #6b6375;
 	--background: #f8f3eb;
+	--foreground: #21100c;
 	--border: oklch(0.922 0 0);
 	--card: oklch(1 0 0);
 	--primary: #40251b;
-		--secondary: #21100c;
+	--secondary: #21100c;
 
 	--accent: #e5d5c3;
 	--accent-bg: rgba(170, 59, 255, 0.1);
@@ -130,6 +132,7 @@
 		--secondary: #21100c;
 
 		--background: #f8f3eb;
+		--foreground: #21100c;
 		--border: #2e303a;
 
 		--code-bg: #1f2028;

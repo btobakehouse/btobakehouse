@@ -1,6 +1,8 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { IconArrowUpRight } from "@tabler/icons-react";
+import { Check } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PARTNERSHIP_TABS } from "@/constant";
+import { Button } from "./ui/button";
 
 const TailoredPartnership = () => {
 	return (
@@ -76,13 +78,16 @@ const TailoredPartnership = () => {
 								</div>
 
 								<div>
-									<button
-										type="button"
-										className="inline-flex items-center rounded-lg gap-3 bg-background px-6 py-2 font-inter text-sm text-secondary hover:bg-accent/90 transition-colors duration-300 hover:cursor-pointer"
+									<a
+										href="https://docs.google.com/forms/d/e/1FAIpQLSc3XQClOhl44Nz95IVdDjMeJeumspqBdUyK6FssILV5liJzgw/viewform"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="w-full"
 									>
-										Plan Your Supply
-										<ArrowUpRight className="h-4 w-4" />
-									</button>
+										<Button variant="secondary" size="sm">
+											Plan Your Supply <IconArrowUpRight className="size-4" />
+										</Button>
+									</a>
 								</div>
 							</div>
 						</TabsContent>

@@ -1,4 +1,5 @@
 import PARTNERSHIP_2 from "@/assets/partnership-2.jpg";
+import { Button } from "./ui/button";
 
 const CtaSection = () => {
 	return (
@@ -9,7 +10,7 @@ const CtaSection = () => {
 			<div className="w-full bg-secondary/75 backdrop-blur-[2px] flex items-center">
 				<div className="max-w-7xl mx-auto px-4 py-22 sm:px-6 lg:px-8 lg:py-44">
 					<div className="grid grid-cols-1">
-						<div className="text-center mx-auto max-w-3xl">
+						<div className="mx-auto max-w-3xl flex flex-col text-center gap-8">
 							<div className="flex flex-col gap-6 items-center">
 								<p className="text-xs md:text-md font-inter font-regular tracking-[.25em] text-background/80 uppercase">
 									Let's build your supply
@@ -26,20 +27,21 @@ const CtaSection = () => {
 								</p>
 							</div>
 
-							<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+							<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 								<a
-									href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
-									className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-2 md:py-3 text-sm md:text-base font-inter text-primary shadow-md hover:bg-accent/80 transition"
+									href="https://docs.google.com/forms/d/e/1FAIpQLSc3XQClOhl44Nz95IVdDjMeJeumspqBdUyK6FssILV5liJzgw/viewform"
+									target="_blank"
+									rel="noopener noreferrer"
 								>
-									Request Bulk Pricing
+									<Button variant="secondary">Request Bulk Pricing</Button>
 								</a>
 
-								<a
-									href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
-									className="inline-flex items-center justify-center rounded-lg border border-white/40 px-6 py-2 md:py-3 text-sm md:text-base font-inter text-background transition-colors duration-200 hover:bg-accent hover:text-primary"
+								<Button
+									variant="outline"
+									className="border-white/40 text-white"
 								>
 									Message on WhatsApp
-								</a>
+								</Button>
 							</div>
 						</div>
 					</div>
