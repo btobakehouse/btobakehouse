@@ -1,3 +1,6 @@
+import { IconBrandInstagram } from "@tabler/icons-react";
+import { Button } from "@/components/ui/button";
+
 const Footer = () => {
 	return (
 		<footer className="bg-secondary">
@@ -15,13 +18,9 @@ const Footer = () => {
 							A plug-and-play bakery partner for cafés, restaurants, hotels,
 							caterers and food brands.
 						</p>
-
-						<a
-							href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
-							className="mt-4 inline-block bg-accent text-primary px-6 py-2 md:py-3 rounded-lg shadow-sm font-inter font-regular text-xs md:text-sm w-fit hover:bg-accent/80 transition hover:cursor-pointer"
-						>
+						<Button variant="secondary" size="sm">
 							Request Bulk Pricing
-						</a>
+						</Button>
 					</div>
 
 					{/* RIGHT SECTION */}
@@ -50,7 +49,15 @@ const Footer = () => {
 								<ul className="space-y-3 text-background/80 font-inter text-sm md:text-base">
 									<li>About</li>
 									<li>Contact</li>
-									<li>Instagram</li>
+									<li>
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											href="https://instagram.com/btobakehouse"
+										>
+											Instagram
+										</a>
+									</li>
 								</ul>
 							</div>
 
@@ -73,14 +80,17 @@ const Footer = () => {
 				{/* BOTTOM */}
 				<div className="mt-10 border-t border-background/20 pt-6 text-xs md:text-sm text-background/60 flex flex-col md:flex-row items-center justify-between font-inter font-regular">
 					<div>© 2026 B2Bakehouse. Wholesale bakery supply.</div>
-					<a
-						target="_blank"
-						rel="noopener noreferrer"
-						href="https://instagram.com/btobakehouse"
-						className="ml-2 text-background/60 hover:text-background transition-colors"
-					>
-						@btobakehouse
-					</a>
+					<div className="flex flex-row items-center justify-between">
+						<IconBrandInstagram size={18} />
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://instagram.com/btobakehouse"
+							className="ml-2 text-background/60 hover:text-background transition-colors"
+						>
+							@btobakehouse
+						</a>
+					</div>
 				</div>
 			</div>
 		</footer>

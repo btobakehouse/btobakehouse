@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
 	Sheet,
 	SheetClose,
@@ -47,10 +48,11 @@ export default function Navbar() {
 				{/* CTA */}
 				<div className="hidden md:flex items-center gap-4">
 					<a
-						href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
-						className="text-sm rounded-lg tracking-wide bg-primary text-background px-5 py-2 hover:opacity-90 active:scale-95 font-inter font-light hover:bg-secondary transition-all duration-300"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSc3XQClOhl44Nz95IVdDjMeJeumspqBdUyK6FssILV5liJzgw/viewform"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
-						Request Bulk Pricing
+						<Button size="sm">Request Bulk Pricing</Button>
 					</a>
 				</div>
 
@@ -94,11 +96,11 @@ export default function Navbar() {
 
 							<SheetClose className="flex flex-row items-start justify-start">
 								<a
-									href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
-									className="text-sm rounded-lg tracking-wide bg-primary text-background px-5 py-1.5 hover:opacity-90 active:scale-95 font-inter font-light hover:bg-secondary transition-all duration-300 text-left"
-									aria-label="Request Bulk Pricing"
+									href="https://docs.google.com/forms/d/e/1FAIpQLSc3XQClOhl44Nz95IVdDjMeJeumspqBdUyK6FssILV5liJzgw/viewform"
+									target="_blank"
+									rel="noopener noreferrer"
 								>
-									Request Bulk Pricing
+									<Button size="xs">Request Bulk Pricing</Button>
 								</a>
 							</SheetClose>
 						</div>

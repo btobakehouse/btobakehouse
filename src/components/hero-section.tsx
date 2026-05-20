@@ -1,4 +1,5 @@
 import Hero_Image from "../assets/hero.webp";
+import { Button } from "./ui/button";
 
 const HeroSection = () => {
 	return (
@@ -38,18 +39,20 @@ const HeroSection = () => {
 							businesses that need quality, consistency and reliable supply.{" "}
 						</p>
 					</div>
-					<div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+					<div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
 						<a
-							href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
-							className="text-sm md:text-base hover:cursor-pointer rounded-lg bg-primary hover:bg-secondary px-4 sm:px-5 py-2 sm:py-2.5 text-background font-inter font-light transition-colors duration-300 whitespace-nowrap text-center"
+							href="https://docs.google.com/forms/d/e/1FAIpQLSc3XQClOhl44Nz95IVdDjMeJeumspqBdUyK6FssILV5liJzgw/viewform"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="w-full"
 						>
-							Request Bulk Pricing
+							<Button className="w-full">Request Bulk Pricing</Button>
 						</a>
-						<a
-							href="#explore-range"
-							className="text-sm text-center md:text-base hover:cursor-pointer rounded-lg border border-primary hover:bg-primary px-4 sm:px-5 py-2 sm:py-2.5 text-primary hover:text-background font-inter font-light transition-colors duration-300 whitespace-nowrap"
-						>
-							Explore Range
+
+						<a href="#explore-range" className="w-full">
+							<Button variant="outline" className="w-full">
+								Explore Range
+							</Button>
 						</a>
 					</div>
 				</div>

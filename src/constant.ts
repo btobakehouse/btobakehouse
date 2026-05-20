@@ -25,6 +25,24 @@ export const NAV_ITEMS = [
 	},
 ];
 
+export const PROBLEMS = [
+	"In house production is expensive to setup",
+	"Maintaining consistency batch to batch is difficult",
+	"Bakery equipment requires investment",
+	"Skilled bakery staff is hard to hire and retain",
+	"Menus need constant variety and seasonal SKUs",
+	"Demand for certain items fluctuates",
+];
+
+export const SOLUTIONS = [
+	"Ready to serve products on your schedule",
+	"Bulk ready production at predictable cost",
+	"Standardised recipes across every batch",
+	"white label options with your branding",
+	"Flexible quantities, formats, and SKUs",
+	"Reliable recurring supply",
+];
+
 export const CATALOGUE_ITEMS = [
 	{
 		id: 1,

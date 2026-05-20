@@ -37,7 +37,9 @@ const HowItWorks = () => {
 
 				<div className="flex justify-center">
 					<a
-						href="mailto:btobakehouse@gmail.com?subject=Bulk%20Pricing%20Request"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSc3XQClOhl44Nz95IVdDjMeJeumspqBdUyK6FssILV5liJzgw/viewform"
+						target="_blank"
+						rel="noopener noreferrer"
 						className="inline-flex items-center gap-3 border border-border bg-transparent px-5 py-3 font-inter text-base font-light text-primary transition-colors duration-200 hover:bg-secondary hover:text-background"
 					>
 						Request a Sample Box
